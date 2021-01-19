@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>OneBillion &mdash; Literates</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700|Anton" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="fonts/icomoon/style.css">
+
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="css/jquery-ui.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+
+    <link rel="stylesheet" href="fonts/flaticon/font/flaticon.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        * {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background: #eaedf1;
+    font-family: 'Lato', sans-serif;
+}
+.header {
+    background: white;
+    padding: 30px;
+    text-align: center;
+}
+.header h1 {
+    font-weight: 300;
+    display: inline;
+}
+h2 {
+    color: #89867e;
+    text-align: center;
+    font-weight: 300;
+}
+.color {
+    width: 350px;
+    margin: 0 auto;
+}
+.color li {
+    margin: 0 15px 0 0;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 100%;
+}
+.color .red    {background: #fa5a5a;}
+.color .yellow {background: #f0d264;}
+.color .green  {background: #82c8a0;}
+.color .cyan   {background: #7fccde;}
+.color .blue   {background: #6698cb;}
+.color .purple {background: #cb99c5;}
+
+.content, 
+.content-gradient, 
+.content-3d {
+  margin: 40px auto;
+}
+.content {
+  width: 80%;
+  max-width: 700px;
+}
+.content-3d {
+  width: 50%;
+  max-width: 300px;
+}
+pre {
+    width: 100%;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.72);
+    color: #f8f8f2;
+    border-radius: 0 0 4px 4px;
+    margin-top: 20px;
+  white-space: pre-wrap; /* css-3 */
+  white-space: -moz-pre-wrap; /* Mozilla, since 1999 */
+  white-space: -pre-wrap; /* Opera 4-6 */
+  white-space: -o-pre-wrap; /* Opera 7 */
+  word-wrap: break-word; /* Internet Explorer 5.5+ */
+}
+pre .bt  {color: #f8f8f2;} /* <> */
+pre .anc {color: #f92672;} /* anchor tag */
+pre .att {color: #a6a926;} /* attribute */
+pre .val {color: #e6db74;} /* value */
+
+.btn-container, .container {
+    background-color: white;
+    border-radius: 4px;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.container h2 {
+    padding-top: 30px;
+    font-weight: 300;
+}
+.btn, .btn-two {
+    margin: 9px;
+}
+.btn-gradient {
+    margin: 5px;
+}
+a[class*="btn"] {text-decoration: none;}
+input[class*="btn"], 
+button[class*="btn"] {border: 0;}
+
+/* Here you can change the button sizes */
+.btn.large, 
+.btn-two.large, 
+.btn-effect.large {
+  padding: 20px 40px; 
+  font-size: 22px;
+}
+.btn.small, 
+.btn-two.small, 
+.btn-gradient.small, 
+.btn-effect.small {
+  padding: 8px 18px;  
+  font-size: 14px;
+}
+.btn.mini, 
+.btn-two.mini, 
+.btn-gradient.mini, 
+.btn-effect.mini {
+  padding: 4px 12px;  
+  font-size: 12px;
+}
+.btn.block, 
+.btn-two.block, 
+.btn-gradient.block, 
+.btn-effect.block {
+  display: block;
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.btn-gradient.large {
+  padding: 15px 45px; 
+  font-size: 22px;
+}
+
+/* Colors for .btn and .btn-two */
+.btn.blue, .btn-two.blue     {background-color: #7fb1bf;}
+.btn.green, .btn-two.green   {background-color: #9abf7f;}
+.btn.red, .btn-two.red       {background-color: #fa5a5a;}
+.btn.purple, .btn-two.purple {background-color: #cb99c5;}
+.btn.cyan, .btn-two.cyan     {background-color: #7fccde;}
+.btn.yellow, .btn-two.yellow {background-color: #f0d264;}
+
+.rounded {
+  border-radius: 10px;
+}
+
+/* default button style */
+.btn {
+    position: relative;
+    border: 0;
+    padding: 15px 25px;
+    display: inline-block;
+    text-align: center;
+    color: white;
+}
+.btn:active {
+    top: 4px;   
+}
+
+/* color classes for .btn */
+.btn.blue {box-shadow: 0px 4px #74a3b0;}
+.btn.blue:active {box-shadow: 0 0 #74a3b0; background-color: #709CA8;}
+
+.btn.green {box-shadow: 0px 4px 0px #87a86f;}
+.btn.green:active {box-shadow: 0 0 #87a86f; background-color: #87a86f;}
+
+.btn.red {box-shadow:0px 4px 0px #E04342;}
+.btn.red:active {box-shadow: 0 0 #ff4c4b; background-color: #ff4c4b;}
+
+.btn.purple {box-shadow:0px 4px 0px #AD83A8;}
+.btn.purple:active {box-shadow: 0 0 #BA8CB5; background-color: #BA8CB5;}
+
+.btn.cyan {box-shadow:0px 4px 0px #73B9C9;}
+.btn.cyan:active {box-shadow: 0 0 #73B9C9; background-color: #70B4C4;}
+
+.btn.yellow {box-shadow:0px 4px 0px #D1B757;}
+.btn.yellow:active {box-shadow: 0 0 #ff4c4b; background-color: #D6BB59;}
+
+/* Button two - I have no creativity for names */
+.btn-two {
+    color: white;   
+    padding: 15px 25px;
+    display: inline-block;
+    border: 1px solid rgba(0,0,0,0.21);
+    border-bottom-color: rgba(0,0,0,0.34);
+    text-shadow:0 1px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.34) inset, 
+                      0 2px 0 -1px rgba(0,0,0,0.13), 
+                      0 3px 0 -1px rgba(0,0,0,0.08), 
+                      0 3px 13px -1px rgba(0,0,0,0.21);
+}
+.btn-two:active {
+    top: 1px;
+    border-color: rgba(0,0,0,0.34) rgba(0,0,0,0.21) rgba(0,0,0,0.21);
+    box-shadow: 0 1px 0 rgba(255,255,255,0.89),0 1px rgba(0,0,0,0.05) inset;
+    position: relative;
+}
+/* 3D Button */
+.btn-3d {
+    position: relative;
+    display: inline-block;
+    font-size: 22px;
+    padding: 20px 60px;
+    color: white;
+    margin: 20px 10px 10px;
+    border-radius: 6px;
+    text-align: center;
+    transition: top .01s linear;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+.btn-3d.red:hover    {background-color: #e74c3c;}
+.btn-3d.blue:hover   {background-color: #699DD1;}
+.btn-3d.green:hover  {background-color: #80C49D;}
+.btn-3d.purple:hover {background-color: #D19ECB;}
+.btn-3d.yellow:hover {background-color: #F0D264;}
+.btn-3d.cyan:hover   {background-color: #82D1E3;}
+
+.btn-3d:active {
+    top: 9px;
+}
+
+/* 3D button colors */
+.btn-3d.red {
+    background-color: #e74c3c;
+    box-shadow: 0 0 0 1px #c63702 inset,
+        0 0 0 2px rgba(255,255,255,0.15) inset,
+        0 8px 0 0 #C24032,
+        0 8px 0 1px rgba(0,0,0,0.4),
+                0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.red:active {
+    box-shadow: 0 0 0 1px #c63702 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.btn-3d.blue {
+    background-color: #6DA2D9;
+    box-shadow: 0 0 0 1px #6698cb inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 8px 0 0 rgba(110, 164, 219, .7),
+                0 8px 0 1px rgba(0,0,0,.4),
+                0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.blue:active {
+    box-shadow: 0 0 0 1px #6191C2 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.btn-3d.green {
+    background-color: #82c8a0;
+    box-shadow: 0 0 0 1px #82c8a0 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 8px 0 0 rgba(126, 194, 155, .7),
+                0 8px 0 1px rgba(0,0,0,.4),
+                0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.green:active {
+    box-shadow: 0 0 0 1px #82c8a0 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.btn-3d.purple {
+    background-color: #cb99c5;
+    box-shadow: 0 0 0 1px #cb99c5 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 8px 0 0 rgba(189, 142, 183, .7),
+                0 8px 0 1px rgba(0,0,0,.4),
+                0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.purple:active {
+    box-shadow: 0 0 0 1px #cb99c5 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.btn-3d.cyan {
+    background-color: #7fccde;
+    box-shadow: 0 0 0 1px #7fccde inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 8px 0 0 rgba(102, 164, 178, .6),
+                0 8px 0 1px rgba(0,0,0,.4),
+                0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.cyan:active {
+    box-shadow: 0 0 0 1px #7fccde inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 0 0 1px rgba(0,0,0,0.4);
+}
+
+.btn-3d.yellow {
+    background-color: #F0D264;
+    box-shadow: 0 0 0 1px #F0D264 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 8px 0 0 rgba(196, 172, 83, .7),
+                0 8px 0 1px rgba(0,0,0,.4),
+                0 8px 8px 1px rgba(0,0,0,0.5);
+}
+.btn-3d.yellow:active {
+    box-shadow: 0 0 0 1px #F0D264 inset,
+                0 0 0 2px rgba(255,255,255,0.15) inset,
+                0 0 0 1px rgba(0,0,0,0.4);
+}
+
+/* Gradient buttons */
+.btn-gradient {
+    text-decoration: none;
+    color: white;
+    padding: 10px 30px;
+    display: inline-block;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.21);
+    border-bottom: 4px solid rgba(0,0,0,0.21);
+    border-radius: 4px;
+    text-shadow: 0 1px 0 rgba(0,0,0,0.15);
+}
+/* Gradient - ugly css is ugly */
+.btn-gradient.cyan {
+    background: rgba(27,188,194,1);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(27,188,194,1)), to(rgba(24,163,168,1)));
+    background: -webkit-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+    background: -moz-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+    background: -o-linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+    background: linear-gradient(rgba(27,188,194,1) 0%, rgba(24,163,168,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1bbcc2', endColorstr='#18a3a8', GradientType=0);
+}
+
+.btn-gradient.red{ 
+    background: rgba(250,90,90,1);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(250,90,90,1)), to(rgba(232,81,81,1)));
+    background: -webkit-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+    background: -moz-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+    background: -o-linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+    background: linear-gradient(rgba(250,90,90,1) 0%, rgba(232,81,81,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fa5a5a', endColorstr='#e85151', GradientType=0 );
+}
+.btn-gradient.orange {
+    background: rgba(255,105,30,1);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(255,105,30,1)), to(rgba(230,95,28,1)));
+    background: -webkit-linear-gradient(rgba(255,105,30,1) 0%, rgba(230,95,28,1) 100%);
+    background: -moz-linear-gradient(rgba(255,105,30,1) 0%, rgba(230,95,28,1) 100%);
+    background: -o-linear-gradient(rgba(255,105,30,1) 0%, rgba(230,95,28,1) 100%);
+    background: linear-gradient(rgba(255,105,30,1) 0%, rgba(230,95,28,1) 100%);
+}
+.btn-gradient.blue {
+    background: rgba(102,152,203,1);
+    background: -moz-linear-gradient(top, rgba(102,152,203,1) 0%, rgba(92,138,184,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(102,152,203,1)), color-stop(100%, rgba(92,138,184,1)));
+    background: -webkit-linear-gradient(top, rgba(102,152,203,1) 0%, rgba(92,138,184,1) 100%);
+    background: -o-linear-gradient(top, rgba(102,152,203,1) 0%, rgba(92,138,184,1) 100%);
+    background: -ms-linear-gradient(top, rgba(102,152,203,1) 0%, rgba(92,138,184,1) 100%);
+    background: linear-gradient(to bottom, rgba(102,152,203,1) 0%, rgba(92,138,184,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6698cb', endColorstr='#5c8ab8', GradientType=0 );
+}
+.btn-gradient.purple { 
+    background: rgba(203,153,197,1);
+    background: -moz-linear-gradient(top, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(203,153,197,1)), color-stop(100%, rgba(181,134,176,1)));
+    background: -webkit-linear-gradient(top, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+    background: -o-linear-gradient(top, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+    background: -ms-linear-gradient(top, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+    background: linear-gradient(to bottom, rgba(203,153,197,1) 0%, rgba(181,134,176,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cb99c5', endColorstr='#b586b0', GradientType=0 );
+}
+.btn-gradient.yellow {
+    background: rgba(240,210,100,1);
+    background: -webkit-gradient(linear, 0 0, 0 100%, from(rgba(240,210,100,1)), to(rgba(229,201,96,1)));
+    background: -webkit-linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
+    background: -moz-linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
+    background: -o-linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
+    background: linear-gradient(rgba(240,210,100,1) 0%, rgba(229,201,96,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0d264', endColorstr='#e5c960', GradientType=0 );
+}
+.btn-gradient.green {
+    background: rgba(130,200,160,1);
+    background: -moz-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(130,200,160,1)), color-stop(100%, rgba(130,199,158,1)));
+    background: -webkit-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+    background: -o-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+    background: -ms-linear-gradient(top, rgba(130,200,160,1) 0%, rgba(130,199,158,1) 100%);
+    background: linear-gradient(to bottom, rgba(130,200,160,1) 0%, rgba(124, 185, 149, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#82c8a0', endColorstr='#82c79e', GradientType=0 );
+}
+
+.btn-gradient.red:active      {background: #E35252;}
+.btn-gradient.orange:active {background: #E8601B;}
+.btn-gradient.cyan:active   {background: #169499;}
+.btn-gradient.blue:active   {background: #608FBF;}
+.btn-gradient.purple:active {background: #BD8EB7;}
+.btn-gradient.yellow:active {background: #DBC05B;}
+.btn-gradient.green:active  {background: #72B08E;}
+    </style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+  
+  <div class="site-wrap"  id="home-section">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div>
+    <header class="site-navbar js-sticky-header site-navbar-target" role="banner">
+
+      <div class="container">
+        <div class="row align-items-center position-relative">
+            <div class="site-logo">
+             <a href="index.html" class="text-black"><span class="text-primary">
+                  OneBillion Literates</a>
+            </div>
+              <nav class="site-navigation text-center ml-auto" role="navigation">
+                <ul class="site-menu main-menu js-clone-nav ml-auto d-none d-lg-block">
+                  <li><a href="#home-section" class="nav-link">Home</a></li>
+                  <li><a href="#about-section" class="nav-link">About</a></li>
+                  <li><a href="#discover-section" class="nav-link">Picture Gallery</a></li>
+                  <li><a href="#donate-section" class="nav-link">You Can Help</a></li>
+                  <li><a href="#blog-section" class="nav-link">News & Activities</a></li>
+                  <li><a href="#" class="nav-link">Financials</a></li>
+                  <li><a href="#contact-section" class="nav-link">Contact</a></li>
+                </ul>
+              </nav>
+          
+            
+
+          <div class="toggle-button d-inline-block d-lg-none"><a href="#" class="site-menu-toggle py-5 js-menu-toggle text-red"><span class="icon-menu h1"></span></a></div>
+
+        </div>
+      </div>
+      
+    </header>
+    
+    <div class="owl-carousel slide-one-item">
+      <a href="#"><img style="height:600px;" src="images/hero_1.jpg" alt="Image" class="img-fluid"></a>
+      <a href="#"><img style="height:600px;" src="images/hero_2.jpg" alt="Image" class="img-fluid"></a>
+    </div>
+    
+    <div class="d-block d-md-flex intro-engage">
+      <div class="">
+        <h2>OUR GOAL</h2>
+        <p>Equality in Education<br>
+We bring English & Computer skills to rural children & communities.<br>
+Women Empowerment<br>
+We bring Financial & Intellectual independence to rural women</p>
+      </div>
+      <div>
+        <h2>YOUR INVOLVEMENT</h2>
+        <center><p>YOUR INVOLVEMENT</p></center>
+        <center><a href="#" class="btn-gradient blue mini">Donate</a></center>
+      </div>
+      <div>
+        <h2>OUR IMPACT</h2>
+        <p>We bridge the urban-rural divide.<br>
+Rural children get equal opportunity for a better future.<br>
+Over 4500 rural kids keep pace with Technology and learn quality English.<br>
+Rural communities empowered through training and employment of women</p>
+      </div>
+    </div>
+
+    <div class="site-section bg-image overlay counter" style="background-image: url('images/hero_1_no-text.jpg');" id="about-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-lg-6 mb-4">
+            <!--<figure class="block-img-video-1" data-aos="fade">-->
+            <!--  <a href="https://vimeo.com/45830194" class="popup-vimeo">-->
+                <!--<span class="icon"><span class="icon-play"></span></span>-->
+                <br>
+                <br>
+                <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/summerprogram2_0.jpg" alt="Image" class="img-fluid">
+            <!--  </a>-->
+            <!--</figure>-->
+          </div>
+          <div class="col-lg-5 ml-auto align-self-lg">
+            <h2 class="text-black mb-4 text-uppercase section-title">Our Model</h2>
+            <p class="text-black">Sign MOUs with Block Education Officers<br>
+Adopt rural Government Primary schools<br>
+Identify educated / semi-educated homemakers from the same communities to train and employ them as Coordinators to teach English & Computers to the children of these schools<br>
+Bring resources like Laptops, Tablets and Libraries<br>
+Rural Coordinators receive weekly in-house training<br>
+Rural Coordinators also undergo training in other Institutions<br>
+Volunteers from the city visit the schools once a week to interact with the kids and the Coordinators<br>
+Kids & Coordinators are assessed regularly to gauge the impact of OBLF intervention.</p>
+            <!--<p class="text-black">Dolor, eligendi voluptate ducimus itaque esse autem perspiciatis sint! Recusandae dolor aliquid inventore sit,</p>-->
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
+            <div class="block-counter-1">
+              <span class="number"><span data-number="15">0</span></span>
+              <span class="caption text-black">Number of Orphanage</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
+            <div class="block-counter-1">
+              <span class="number"><span data-number="392">0</span></span>
+              <span class="caption text-black">Number of Donations</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
+            <div class="block-counter-1">
+              <span class="number"><span data-number="3293">0</span></span>
+              <span class="caption text-black">Number of Volunteers</span>
+            </div>
+          </div>
+          <div class="col-md-6 mb-4 col-lg-0 col-lg-3">
+            <div class="block-counter-1">
+              <span class="number"><span data-number="1212">0</span></span>
+              <span class="caption text-black">Number of Orphans</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="site-section bg-light counter" id="discover-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+            <div class="block-heading-1">
+              <h2 class="text-black text-uppercase">Annual Day August 2018</h2>
+              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto aperiam unde natus voluptates placeat accusamus vel laborum cupiditate. Reiciendis commodi perferendis dignissimos, amet quis.</p>-->
+            </div>
+          </div>
+        </div>
+        <div class="row mb-5">
+
+          <div class="col-lg-6 mb-5">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_1.jpg" alt="Image" class="img-fluid">
+          </div>
+          
+          <div class="col-lg-6 mb-5">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_2.jpg" alt="Image" class="img-fluid">
+          </div>
+          
+          <div class="col-lg-6 mb-5">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_3.jpg" alt="Image" class="img-fluid">
+          </div>
+          
+          <div class="col-lg-6 mb-5">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_4.jpg" alt="Image" class="img-fluid">
+          </div>
+          <!--<div class="col-lg-5 ml-auto align-self-center">-->
+          <!--  <h3 class="text-black text-uppercase mb-4">Build Schools in Africa</h3>-->
+          <!--  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quis, nemo explicabo cupiditate vero fugiat sit eius sequi.</p>-->
+
+          <!--  <div class="row mb-4">-->
+          <!--    <div class="col-md-6">-->
+          <!--      <div class="block-counter-1 block-counter-1-sm">-->
+          <!--        <span class="number"><span data-number="15">0</span></span>-->
+          <!--        <span class="caption text-black">Schools</span>-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--    <div class="col-md-6">-->
+          <!--      <div class="block-counter-1 block-counter-1-sm">-->
+          <!--        <span class="number"><span data-number="1039">0</span></span>-->
+          <!--        <span class="caption text-black">Students</span>-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--  </div>-->
+
+            
+          <!--</div>-->
+
+          
+          
+        </div>
+
+        <div class="row mb-5">
+
+          <div class="col-lg-6 mb-5 order-lg-2">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_5.jpg" alt="Image" class="img-fluid">
+          </div>
+          <div class="col-lg-6 mb-5 order-lg-2">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_6.jpg" alt="Image" class="img-fluid">
+          </div><div class="col-lg-6 mb-5 order-lg-2">
+            <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/annualday_5.jpg" alt="Image" class="img-fluid">
+          </div>
+          <!--<div class="col-lg-5 mr-auto align-self-center order-lg-1">-->
+          <!--  <h3 class="text-black text-uppercase mb-4">Feeding Children in Africa</h3>-->
+          <!--  <p class="mb-5">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam quis, nemo explicabo cupiditate vero fugiat sit eius sequi.</p>-->
+
+          <!--  <div class="row">-->
+          <!--    <div class="col-md-6">-->
+          <!--      <div class="block-counter-1 block-counter-1-sm">-->
+          <!--        <span class="number"><span data-number="3298">0</span></span>-->
+          <!--        <span class="caption text-black">Children</span>-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--    <div class="col-md-6">-->
+          <!--      <div class="block-counter-1 block-counter-1-sm">-->
+          <!--        <span class="number"><span data-number="38">0</span></span>-->
+          <!--        <span class="caption text-black">Orphanage</span>-->
+          <!--      </div>-->
+          <!--    </div>-->
+          <!--  </div>-->
+
+          <!--</div>-->
+      </div>
+    </div>
+  </div>
+
+    <div class="site-section bg-image overlay" style="background-image: url('images/hero_1_no-text.jpg');" id="donate-section">
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-lg-5 text-center">
+            <h2 class="text-black mb-4">Make A Donation Now! You May Change Lives Forever</h2>
+            <p><a href="#" class="btn btn-primary px-4 py-3 btn-block">Donate Now</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="site-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6 col-lg-4 mb-4 text-center">
+            <span class="flaticon-piggy-bank d-block mb-3 display-3 text-secondary"></span>
+            <h3 class="text-primary h4 mb-2">Make Donation</h3>
+            <p>Accusantium dignissimos voluptas rem consequatur ratione illo sit quasi.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 text-center">
+            <span class="flaticon-blood d-block mb-3 display-3 text-secondary"></span>
+            <h3 class="text-primary h4 mb-2">Medical Health</h3>
+            <p>Praesentium magnam pariatur quae necessitatibus eligendi voluptate ducimus.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 text-center">
+            <span class="flaticon-food d-block mb-3 display-3 text-secondary"></span>
+            <h3 class="text-primary h4 mb-2">Food for the Poor</h3>
+            <p>Accusantium dignissimos voluptas rem consequatur ratione illo sit quasi.</p>
+          </div>
+
+          <div class="col-md-6 col-lg-4 mb-4 text-center">
+            <span class="flaticon-donation d-block mb-3 display-3 text-secondary"></span>
+            <h3 class="text-primary h4 mb-2">Help &amp; Love</h3>
+            <p>Accusantium dignissimos voluptas rem consequatur ratione illo sit quasi.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 text-center">
+            <span class="flaticon-dollar d-block mb-3 display-3 text-secondary"></span>
+            <h3 class="text-primary h4 mb-2">Give To The Needy</h3>
+            <p>Praesentium magnam pariatur quae necessitatibus eligendi voluptate ducimus.</p>
+          </div>
+          <div class="col-md-6 col-lg-4 mb-4 text-center">
+            <span class="flaticon-unity d-block mb-3 display-3 text-secondary"></span>
+            <h3 class="text-primary h4 mb-2">Volunteer</h3>
+            <p>Accusantium dignissimos voluptas rem consequatur ratione illo sit quasi.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="site-section" id="team-section">
+      <div class="container">
+        <div class="row mb-5 justify-content-center">
+          <div class="col-md-7 text-center">
+              <h2 class="text-black text-uppercase section-title">Our Model</h2>
+              <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/styles/image_style/public/Picture1.png?itok=rveUR3XF">
+          </div>
+        </div>
+        <h2 class="text-black text-uppercase section-title">Our Trustees</h2>
+        <div class="row">
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-up">
+            <div class="block-team-member-1 text-center rounded">
+              <figure>
+                <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/styles/people_admin/public/IMG_20150208_195852_0.jpg?itok=nqU-rq6u" alt="Image" class="img-fluid rounded-circle">
+              </figure>
+              <h3 class="font-size-20 text-black">Anamika Majumder </h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Founder and Managing Trustee</span>
+              <p class="px-3 mb-3">Anamika is a Software Engineer and has several years of experience working in companies like Sun Microsystems and Omgeo LLC (a subsidiary of DTCC) in Massachusetts, USA.She has an under-graduate degree in Engineering from the Malaviya National Institute of Technology, (f.k.a REC) Jaipur, Rajasthan, India and a Master's in Computer Science from the University of Massachusetts, Boston. Anamika moved back to India after 12 years in May 2010 to set up One Billion Literates Foundation because she believes the need of the hour is to improve state run schools. Anamika works as a software professional in the Boston area.</p>
+              <!--<div class="block-social-1">-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>-->
+              <!--</div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="100">
+            <div class="block-team-member-1 text-center rounded">
+              <figure>
+                <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/styles/people_admin/public/AashuCalapa.jpg?itok=dr9juZJx" alt="Image" class="img-fluid rounded-circle">
+              </figure>
+              <h3 class="font-size-20 text-black">Aashu Calapa </h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Trustee</span>
+              <p class="px-3 mb-3">Aashu Calapa is currently a partner with Social Venture Partners India and also heads their program called Million Jobs Mission. Prior to this Asshu was heading The Live Love Laugh Foundation where he spent 18 months working in the area of building mental health awareness.
+
+Aashu's background is essentially in Human Resources (HR). He started his career in Wipro where he spent 11 years and followed that by spending another 11 years in Firstsource Solutions Limited. Aashu also served for a brief while (17 months) in redBus.
+
+Aashu has done his masters from Tata Institute of Social Sciences in Personnel Management & Industrial Relations.<br><br></p>
+              <!--<div class="block-social-1">-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>-->
+              <!--</div>-->
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mb-4 mb-lg-0" data-aos="fade-up" data-aos-delay="200">
+            <div class="block-team-member-1 text-center rounded">
+              <figure>
+                <img src="http://www.onebillionliterates.org/sites/onebillionliterates.org/files/styles/people_admin/public/ManoshSengupta_0.png?itok=JiCpPUr6" alt="Image" class="img-fluid rounded-circle">
+              </figure>
+              <h3 class="font-size-20 text-black">Manosh R. Sengupta </h3>
+              <span class="d-block font-gray-5 letter-spacing-1 text-uppercase font-size-12 mb-3">Trustee</span>
+              <p class="px-3 mb-3">Manosh R Sengupta, Brand-parent, Nurturer, Mentor: brand-@itude. Manosh is an acknowledged strategy-integrator, having masterminded the indetity of many brands, including Idea Cellular. He has over two decades of industry experience with agencies like JWT, Bates and telecom operators like Tata Telecom, Idea Cellular, AT&T and Reliance Communications.
+              <br><br><br><br><br><br><br><br><br><br></p>
+              <!--<div class="block-social-1">-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-facebook"></span></a>-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-twitter"></span></a>-->
+              <!--  <a href="#" class="btn border-w-2 rounded primary-primary-outline--hover"><span class="icon-instagram"></span></a>-->
+              <!--</div>-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+    
+    <!--<div class="site-section block-13 overlay bg-image" id="testimonials-section" data-aos="fade" style="background-image: url('images/hero_1_no-text.jpg');">-->
+    <!--  <div class="container">-->
+        
+    <!--    <div class="text-center mb-5">-->
+    <!--      <h2 class="text-white text-uppercase section-title">Testimonial</h2>-->
+    <!--    </div>-->
+
+    <!--    <div class="owl-carousel nonloop-block-13">-->
+    <!--      <div>-->
+    <!--        <div class="block-testimony-1 text-center">-->
+              
+    <!--          <blockquote class="mb-4">-->
+    <!--            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>-->
+    <!--          </blockquote>-->
+
+    <!--          <figure>-->
+    <!--            <img src="images/person_4.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">-->
+    <!--          </figure>-->
+    <!--          <h3 class="font-size-20 text-white">Ricky Fisher</h3>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      <div>-->
+    <!--        <div class="block-testimony-1 text-center">-->
+    <!--          <blockquote class="mb-4">-->
+    <!--            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>-->
+    <!--          </blockquote>-->
+
+    <!--          <figure>-->
+    <!--            <img src="images/person_2.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">-->
+    <!--          </figure>-->
+    <!--          <h3 class="font-size-20 text-white">Ken Davis</h3>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      <div>-->
+    <!--        <div class="block-testimony-1 text-center">-->
+    <!--          <blockquote class="mb-4">-->
+    <!--            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>-->
+    <!--          </blockquote>-->
+
+    <!--          <figure>-->
+    <!--            <img src="images/person_1.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">-->
+    <!--          </figure>-->
+    <!--          <h3 class="font-size-20 text-white">Mellisa Griffin</h3>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+    <!--      <div>-->
+    <!--        <div class="block-testimony-1 text-center">-->
+    <!--          <blockquote class="mb-4">-->
+    <!--            <p>&ldquo;Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem, fugit excepturi sapiente voluptatum nulla odio quaerat quibusdam tempore similique doloremque veritatis et cupiditate, maiores cumque repudiandae explicabo tempora deserunt consequuntur?&rdquo;</p>-->
+    <!--          </blockquote>-->
+
+    <!--          <figure>-->
+    <!--            <img src="images/person_3.jpg" alt="Image" class="img-fluid rounded-circle mx-auto">-->
+    <!--          </figure>-->
+    <!--          <h3 class="font-size-20 text-white">Robert Steward</h3>-->
+    <!--        </div>-->
+    <!--      </div>-->
+
+
+    <!--    </div>-->
+
+    <!--  </div>-->
+    <!--</div>-->
+
+    
+
+
+    <div class="site-section" id="blog-section">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-7 text-center mb-5 text-center">
+            <h2 class="text-black text-uppercase section-title">News & Activities</h2>
+            <p></p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <div>
+              <iframe width="505" height="315" src="https://www.youtube.com/embed/28B8ZWg1ikg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <!--<h2><a href="single.html">How to Invest In Investing Company</a></h2>-->
+              <!--<p class="text-muted mb-3 text-uppercase small"><span class="mr-2">January 18, 2019</span> By <a href="single.html" class="by">James Cooper</a></p>-->
+              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat et suscipit iste libero neque. Vitae quidem ducimus voluptatibus nemo cum odio ab enim nisi, itaque, libero fuga veritatis culpa quis!</p>-->
+              <!--<p><a href="single.html">Get Started</a></p>-->
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div>
+                <iframe width="505" height="315" src="https://www.youtube.com/embed/28B8ZWg1ikg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+              <!--<a href="single.html" class="mb-4 d-block"><img src="images/hero_2_no-text.jpg" alt="Image" class="img-fluid rounded"></a>-->
+              <!--<h2><a href="single.html">How to Invest In Investing Company</a></h2>-->
+              <!--<p class="text-muted mb-3 text-uppercase small"><span class="mr-2">January 18, 2019</span> By <a href="single.html" class="by">James Cooper</a></p>-->
+              <!--<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quaerat et suscipit iste libero neque. Vitae quidem ducimus voluptatibus nemo cum odio ab enim nisi, itaque, libero fuga veritatis culpa quis!</p>-->
+              <!--<p><a href="single.html">Read More</a></p>-->
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+    <div class="site-section bg-light" id="contact-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center mb-5">
+            <h2 class="text-black section-title text-uppercase">Contact Us</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-lg-6 mb-5">
+            <form action="#" method="post">
+              <div class="form-group row">
+                <div class="col-md-6 mb-4 mb-lg-0">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" placeholder="First name">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <input type="text" class="form-control" placeholder="Email address">
+                </div>
+              </div>
+
+              <div class="form-group row">
+                <div class="col-md-12">
+                  <textarea name="" id="" class="form-control" placeholder="Write your message." cols="30" rows="10"></textarea>
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="col-md-6 ml-auto">
+                  <input type="submit" class="btn btn-block btn-primary text-white py-3 px-5" value="Send Message">
+                </div>
+              </div>
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="row">
+              <div class="col-md-8">
+                <h2 class="footer-heading mb-4">About Us</h2>
+                <!--<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque facere laudantium magnam voluptatum autem. Amet aliquid nesciunt veritatis aliquam.</p>-->
+              </div>
+              <div class="col-md-4 ml-auto">
+                <h2 class="footer-heading mb-4">Features</h2>
+                <ul class="list-unstyled">
+                    
+                  <li><a href="#about-section">About Us</a></li>
+                  <li><a href="#discover-section">Picture Gallery</a></li>
+                  <li><a href="#donate-section">You Can Help</a></li>
+                  <li><a href="#blog-section">News & Activities</a></li>
+                  <li><a href="#contact-section">Contact Us</a></li>
+                </ul>
+              </div>
+              
+            </div>
+          </div>
+          <div class="col-md-4 ml-auto">
+
+            <!--<div class="mb-5">-->
+            <!--  <div class="mb-5">-->
+            <!--    <h2 class="footer-heading mb-4">Some Paragraph</h2>-->
+            <!--    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat nostrum libero iusto dolorum vero atque aliquid.</p>-->
+            <!--  </div>-->
+              <!--<h2 class="footer-heading mb-4">Subscribe to Newsletter</h2>-->
+            <!--  <form action="#" method="post">-->
+            <!--    <div class="input-group mb-3">-->
+            <!--      <input type="text" class="form-control border-secondary text-white bg-transparent" placeholder="Enter Email" aria-label="Enter Email" aria-describedby="button-addon2">-->
+            <!--      <div class="input-group-append">-->
+            <!--        <button class="btn btn-primary text-white" type="button" id="button-addon2">Subscribe</button>-->
+            <!--      </div>-->
+            <!--    </div>-->
+            <!--  </div>-->
+
+
+            <!--  <h2 class="footer-heading mb-4">Follow Us</h2>-->
+            <!--    <a href="#about-section" class="smoothscroll pl-0 pr-3"><span class="icon-facebook"></span></a>-->
+            <!--    <a href="#" class="pl-3 pr-3"><span class="icon-twitter"></span></a>-->
+            <!--    <a href="#" class="pl-3 pr-3"><span class="icon-instagram"></span></a>-->
+            <!--    <a href="#" class="pl-3 pr-3"><span class="icon-linkedin"></span></a>-->
+            <!--</form>-->
+          <!--</div>-->
+        <!--</div>-->
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+            <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+            <!--All rights reserved | This template is made with <i class="icon-heart" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>-->
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+  
+</div>
+  </div>
+  </footer>
+  <script src="js/jquery-3.3.1.min.js"></script>
+  <script src="js/jquery-ui.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/jquery.sticky.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/aos.js"></script>
+
+  <script src="js/main.js"></script>
+  </div>  
+  </body>
+</html>

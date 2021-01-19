@@ -1,0 +1,1 @@
+<?php header("Location: https://chat.whatsapp.com/CZCamBg68XW40jkoR61dA7"); ?>
